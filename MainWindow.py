@@ -1,4 +1,4 @@
-import Tkinter as tk
+import tkinter as tk
 
 from struct import pack
 
@@ -22,9 +22,11 @@ def insert(itemToInsert):
     for item in itemToInsert:
        lb1.insert(tk.END,item)
 
-
+def mutate():
+    pass
 # I made this quick refresh button to demonstrate
 tk.Button(root, text='Clean', command=clean).pack()
 tk.Button(root, text = 'Insert',command=lambda: insert(table)).pack()
+tk.Button(root, text = 'Mutate', command=clean).pack()
 
 root.mainloop()
