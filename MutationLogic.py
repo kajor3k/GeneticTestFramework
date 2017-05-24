@@ -21,13 +21,17 @@ initialPopulation16 = [0, 1, 3, 4, 5, 7, 9, 10, 11, 12, 13, 14, 15, 16, 18, 20, 
 initialPopulation17 = [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 17, 18, 19, 20, 21, 22, 23, 24, 27, 30, 31, 32, 33, 34, 35, 36, 37, 39, 40, 41, 42, 43, 44, 46, 47, 48, 49, 50, 51, 53, 54, 55, 56, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 73, 74, 75, 76, 77, 78, 79, 81, 82, 84, 85, 86, 88, 89, 95, 96, 97, 98, 99, 100, 102, 103, 104, 105, 106, 107, 110, 112, 113, 115, 116, 117, 120, 121, 123, 124, 125, 126, 127]
 initialPopulation18 = [1, 3, 4, 6, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 20, 21, 22, 23, 25, 26, 27, 28, 29, 30, 31, 32, 34, 35, 36, 37, 38, 40, 41, 42, 43, 46, 48, 49, 51, 54, 55, 57, 58, 59, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 81, 82, 83, 84, 85, 86, 87, 88, 90, 92, 93, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 109, 110, 111, 113, 114, 115, 117, 121, 122, 123, 124, 125, 126, 127]
 initialPopulation19 = [ 0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 13, 14, 15, 17, 18, 21, 23, 24, 25, 26, 27, 28, 30, 31, 32, 33, 34, 35, 36, 38, 40, 41, 42, 43, 44, 45, 46, 47, 48, 50, 51, 53, 54, 55, 57, 58, 60, 61, 63, 64, 66, 67, 70, 71, 73, 74, 75, 76, 77, 78, 79, 80, 81, 83, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 102, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 117, 120, 121, 123, 124, 125]
-
+initialPopulationMock = []
 
 listInitial=[initialPopulation0,initialPopulation1,initialPopulation2,initialPopulation3,initialPopulation4,initialPopulation5,initialPopulation6,initialPopulation7,initialPopulation8,initialPopulation9,]
 separator=""
 listInitial2=[initialPopulation10,initialPopulation11,initialPopulation12,initialPopulation13,initialPopulation14,initialPopulation15,initialPopulation16,initialPopulation17,initialPopulation18,initialPopulation19,]
 separator=""
+def functionMock(x):
+    return 0
 
+def generateBugs(initialPopulation,mode):
+    pass
 def f(x):
     #previous function - domain was to slight so put another function#y=-(2*x^8)/229635 + (2*x^7)/15309 + (44*x^6)/32805 - (697*x^5)/32805 - (578*x^4)/10935 + (5852*x^3)/6561 + (108712*x^2)/229635 - (213074*x)/25515 + 643621/6561
     #y=(661*x ^ 19) / 310319133696000000000000000000000 - (84191*x ^ 17) / 1067062284288000000000000000000 + (21373*x ^ 15) / 17831923200000000000000000 - (1863947*x ^ 13) / 192148070400000000000000 + (550410559*x ^ 11) / 12070840320000000000000 - (6174558259*x ^ 9) / 48283361280000000000 + (10235317597*x ^ 7) / 48037017600000000 - (24259025771*x ^ 5) / 118879488000000 + (785230009181*x ^ 3) / 7718911200000 - (4695781*x) / 230945
@@ -197,6 +201,7 @@ def mutatePopulation(chromosomes,mutationRate):
         return chromosomes
 n=20
 population=initializePopulation(listInitial[random.randint(0,9)],n) #random initial population is picked once.
+#insert randomized population with values set to 0 here
 iteration = 0
 stop = 'y'
 while stop == 'y':
